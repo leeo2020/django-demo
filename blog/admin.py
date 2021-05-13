@@ -1,12 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Articles
+from django.contrib import admin
+from .models import Articles, Tags, Category, Author
 
-
-class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'createdTime']
-    list_display_links = ['title']
-
-
-admin.site.register(Articles, ArticleAdmin)
+admin.site.register(Tags)
+admin.site.register(Articles)
+admin.site.register(Category)
+admin.site.register(Author)
